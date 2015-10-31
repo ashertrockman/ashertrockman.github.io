@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Projects</title>
+    <description>Explorations in programming, computer science, and math (listed according to frequency). Learning by doing.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 31 Oct 2015 14:07:45 -0500</pubDate>
+    <lastBuildDate>Sat, 31 Oct 2015 14:07:45 -0500</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>3D Touch: Sensitivity, Force vs. Weight</title>
+        <description>&lt;p&gt;I wanted to investigate the granularity of the new 3D Touch feature on the iPhone 6s. Would it be sensitive enough to make a heart rate monitor? Could it be used to make a scale? So I threw together an app to display touch force, and then I found a scale…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/iphone-6s-scale.png&quot; alt=&quot;Measuring 3D Touch force (don&#39;t want to scratch that iPhone)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lacking any better instruments, I took a video of the scale and phone as I slowly increased my touch pressure. Here are the results:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/force-vs-weight.png&quot; alt=&quot;Seems to be linear&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There seems to be, at least, a linear relationship between force and weight given ample error in my measurements. The 3D Touch pressure is given by a float in the range [0, 6.66666]. This corresponds to the weights [0g, 337g]. Each unit of pressure seems to correspond to approximately 50g.&lt;/p&gt;
+
+&lt;p&gt;Taking the difference of the last touch pressure with the current for each change, I discovered that the smallest granularity is 0.020833, which corresponds to approximately one gram by my prior measurements.&lt;/p&gt;
+
+&lt;p&gt;With proper calibration, it should be possible to use your iPhone as a gram-accurate scale. One caveat: the object being weighed must detected by the capacitative touch screen.&lt;/p&gt;
+
+&lt;p&gt;The screen is not, evidently, sensitive enough to detect my pulse.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 24 Oct 2015 18:23:18 -0500</pubDate>
+        <link>http://localhost:4000/ios/2015/10/24/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/ios/2015/10/24/welcome-to-jekyll.html</guid>
+        
+        
+        <category>ios</category>
+        
+      </item>
+    
+  </channel>
+</rss>
