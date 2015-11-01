@@ -21,7 +21,7 @@ With proper calibration, it should be possible to use your iPhone as a gram-accu
 
 The screen is not, evidently, sensitive enough to detect my pulse.  
 
-So by simply dividing 3D force measurement by 0.0208333, I get a fairly accurate scale.
+So by simply dividing 3D force measurement by 0.0208333, I get a fairly accurate scale. Unfortunately, the object needs to be capacitive to trigger the touch screen. Since I didn't want to scratch the screen, I settled on strawberries (which also work as excellent styluses in a pinch). 
 
 ![Weighing strawberries with iPhones]({{ site.url }}/assets/3d-touch-berries.png)
 
