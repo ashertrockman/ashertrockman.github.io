@@ -21,3 +21,11 @@ With proper calibration, it should be possible to use your iPhone as a gram-accu
 
 The screen is not, evidently, sensitive enough to detect my pulse.  
 
+So by simply dividing 3D force measurement by 0.0208333, I get a fairly accurate scale.
+
+![Weighing strawberries with iPhones]({{ site.url }}/assets/3d-touch-berries.png)
+
+Note: the strawberry is the same in both pictures. My actual scale reads 25.2g, while my 3D Touch scale reads 22.0g - a decent estimate. Doing the same thing for a 216g apple (not pictured), I got measurements between 206g and 218g depending on the apple's orientation.
+
+You can look at the source code [here](https://github.com/ashertrockman/TouchScale).
+
