@@ -17,7 +17,7 @@ There seems to be, at least, a linear relationship between force and weight give
 
 Taking the difference of the last touch pressure with the current for each change, I discovered that the smallest granularity is 0.020833, which corresponds to approximately one gram by my prior measurements.
 
-With proper calibration, it should be possible to use your iPhone as a gram-accurate scale. One caveat: the object being weighed must detected by the capacitative touch screen. 
+With proper calibration, it should be possible to use your iPhone as a gram-accurate scale. One caveat: the object being weighed must be detected by the capacitative touch screen. 
 
 The screen is not, evidently, sensitive enough to detect my pulse.  
 
