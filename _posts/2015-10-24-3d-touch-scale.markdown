@@ -17,6 +17,14 @@ There seems to be, at least, a linear relationship between force and weight give
 
 Taking the difference of the last touch pressure with the current for each change, I discovered that the smallest granularity is 0.020833, which corresponds to approximately one gram by my prior measurements.
 
+**Update:** 0.0208333 works for light 3D Touch sensitivity. Here are values for other sensitivity settings, determined the same way:
+
+Sensitivity | Granularity
+------- | --------
+Light | 0.0208333
+Medium | 0.0166666
+Firm | 0.0138888
+
 With proper calibration, it should be possible to use your iPhone as a gram-accurate scale. One caveat: the object being weighed must be detected by the capacitative touch screen. 
 
 The screen is not, evidently, sensitive enough to detect my pulse.  
