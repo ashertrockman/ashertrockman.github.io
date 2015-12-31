@@ -53,7 +53,7 @@ So by simply dividing the 3D Touch force measurement by 0.0208333, I got a fairl
 ![Weighing strawberries with iPhones]({{ site.url }}/assets/3d-touch-berries.png)
 *Decently accurate so far*
 
-Note: the strawberry is the same in both pictures. My actual scale reads 25.2g, while my 3D Touch scale reads 22.0g - a decent estimate. Doing the same thing for a 216g apple (not pictured), I got measurements between 206g and 218g depending on the apple's orientation.
+Note: the strawberry is the same in both pictures. My actual scale reads 25.2g, while my 3D Touch scale reads 22.0g - a decent estimate. Doing the same thing for a 216g apple, I got measurements between 206g and 218g depending on the apple's orientation.
 
 You can look at the source code [here](https://github.com/ashertrockman/TouchScale).
 
