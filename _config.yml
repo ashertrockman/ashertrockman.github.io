@@ -10,4 +10,6 @@ github_username:  ashertrockman
 twitter_username: ashertrockman
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+    extensions: ["tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
