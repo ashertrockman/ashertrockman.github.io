@@ -22,9 +22,6 @@ table {
 
 **[Try the web app here! TouchScale.co](http://touchscale.co)**
 
-<img src="{{ site.url }}assets/touchscale-lemon2.png" style="width: 80%; margin-left: 10%;" />
-*Ever needed to know how much a lemon weighs?*
-
 I wanted to investigate the granularity of the new 3D Touch feature on the iPhone 6s. Would it be sensitive enough to make a heart rate monitor? Could it be used to make a scale? So I threw together an app to display touch force, and then I found a scale...
 
 ![Measuring 3D Touch force (don't want to scratch that iPhone)]({{ site.url }}/assets/iphone-6s-scale.png)
