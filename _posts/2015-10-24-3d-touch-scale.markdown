@@ -12,7 +12,7 @@ img, video {
     margin: 20px 0px;
 }
 table {
-    width: 400px;
+    width: 350px;
     margin: 50px auto;
 }
 .page-content a {
@@ -59,7 +59,7 @@ You can look at the source code [here](https://github.com/ashertrockman/TouchSca
 
 I discovered that the force values are also accessible in Safari; you can use the `touchmove`, `touchstart`, and `touchend` events. For example: `event.touches[0].force`.  This value is the percent of the maximum force touch value; you can multiply it by the max, 6.6667, to get a result similar to UITouch.
 
-So I used that to make a [simple web app](http://touchscale.co), TouchScale.co:
+So I used that to make a [simple web app](http://touchscale.co), TouchScale.co. (Works on iPhone 6S only.)
 
 ![How much does my apple weigh?]({{ site.url }}assets/touchscale.jpg)
 *Excellent for weighing apples!*
