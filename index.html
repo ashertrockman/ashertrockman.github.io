@@ -1,23 +1,201 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <title>Asher Trockman</title>
+    <meta name="description" content="Asher Trockman">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+            color: #333333;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-weight: 100;
+        }
+        #content {
+            width: 700px;
+            margin: 0 auto;
+            padding-top: 50px;
+            line-height: 24px;
+        }
+        h1 {
+            font-size: 42px;
+            margin: 0;
+            padding-bottom: 16px;
+            line-height: 42px;
+            letter-spacing: -1px;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 0;
+            line-height: 30px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px; 
+        }
+        #pics {
+            float: left;
+            width: 200px;
+        }
+        #about {
+            float: right;
+            width: 470px;
+            margin-top: -5px;
+        }
+        #about-container {
+            margin-top: 20px;
+        }
+        #about p {
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-weight: 100;
+            color: #333333;
+        }
+        #pics img {
+            width: 200px;
+        }
+        a { 
+            color: #00369f;
+            font-weight: 100; 
+            text-decoration: none;
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        #contact {
+            clear: both;
+            padding-top: 16px;
+        }
+        .monospace {
+            padding: 5px 10px;
+            background: #f1f1f1;
+            font-family: 'Courier New', Courier, monospace;
+            color: #333333;
+            line-height: 42px;
+        }
+        .items { 
+            line-height: 19px;
+            border-top: 1px solid #e8e8e8;
+            margin-top: 30px;
+            padding-top: 20px; 
+        }
+        .items table { 
+            border-collapse: collapse;
+            width: 100%; 
+        }
+        .items table tr { 
+            text-align: left;
+        }
+        .items table .date { 
+            width: 15%;
+        }
+        .items table .exp { 
+            width: 85%;
+        }
+        .items table td {
+            padding: 6px 0;
+            vertical-align: top;
+            border: none;
+        }
+    </style>
+  </head>
 
-<div class="home">
+  <body>
+      <div id="content">
+            <header>
+                <h1>Asher Trockman</h1>
+            </header>
+            <article id="about-container">
+                <div id="pics">
+                    <img src="assets/img/cmu-isr.png" alt="Asher Trockman">
+                    <a href="assets/img/jpl-highres.png"><img src="assets/img/jpl-lowres.png" alt="Asher Trockman at JPL"></a>
+                </div>
+                <div id="about">
+                    <p>
+                        I'm an incoming Ph.D. student in the <a href="https://csd.cs.cmu.edu">Computer Science Department</a> at
+                        <a href="https://cs.cmu.edu">Carnegie Mellon University</a>. 
+                        My research interests are in machine learning and software engineering.
+                    </p>
+                    
+                    <p>
+                        Recently, I have investigated natural experiments on open-source software 
+                        in the <a href="https://cmustrudel.github.io">Socio-Technical Research Using Data Excavation Lab</a> at CMU,
+                        and have researched deep learning for detecting surface features in orbital imagery of Mars 
+                        in the <a href="https://ml.jpl.nasa.gov">Machine Learning & Instrument Autonomy Group</a> at NASA JPL.
+                    </p>
+                    
+                    <p>
+                        My agenda includes such varied goals as improving decision-making in open source,
+						advancing machine learning foundations and methodology (e.g., improving robustness and data efficiency),
+                        learning more about the universe through novel applications thereof,
+                        and pulling the perfect shot of espresso.
+                    </p>
 
-  <h1 class="page-heading">Posts</h1>
+                 
+                </div>
+                <div id="contact">
+                        <span class="monospace">
+                                ashert -at- andrew.cmu.edu
+                        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://scholar.google.com/citations?user=xd3LCGcAAAAJ&hl=en">Google Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/ashertrockman">GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/">CV</a>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                </div>
+            </article>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+            <div class="items">
+                <h2>Experience</h2>             
+                <table>
+                <tr>
+                    <td class="exp">
+                        <strong>NASA Jet Propulsion Laboratory</strong><br>
+                        <a href="https://ml.jpl.nasa.gov">Machine Learning & Instrument Autonomy Group</a><br>
+                        Mentors: <a href="https://ml.jpl.nasa.gov/people/mandrake.shtml">Dr. Lukas Mandrake</a> and <a href="http://www.wkiri.com">Dr. Kiri Wagstaff</a><br>
+                        Research Assistant (Caltech <a href="http://www.sfp.caltech.edu/programs/surf">SURF</a>)
+                    </td>
+                    <td class="date">Summer 2018</td>
+                </tr>
+                
+                <tr>
+                    <td class="exp">
+                        <strong>Carnegie Mellon University</strong><br>
+                        <a href="https://isri.cs.cmu.edu">Institute for Software Research</a><br>
+                        Mentors: <a href="https://bvasiles.github.io">Prof. Bogdan Vasilescu</a> and <a href="https://cs.cmu.edu/~ckaestne">Prof. Christian Kästner</a><br>
+                        Research Assistant (<a href="https://www.cmu.edu/scs/isr/reuse/">REUSE</a>)
+                    </td>
+                    <td class="date">Summer 2017</td>
+                </tr>
+                </table>
+            </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+            <div class="items">
+                    <h2>Education</h2>
+                    <table>
+                        <tr>
+                        <td class="exp">    
+                            <strong>Carnegie Mellon University</strong><br>
+                            Ph.D. Candidate, Computer Science
+                        </td>
+                        <td class="date">2019 &ndash; </td>
+                        </tr>
+                        <tr>
+                            <td class="exp">                 
+                            <strong>University of Evansville</strong><br>
+                            B.S. Computer Science &amp; Mathematics
+                            </td>
+                            <td class="date">2016 &ndash; 2019</td>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+
+      </div>
+  </body>
+</html>
