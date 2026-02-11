@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=0.5, width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Asher Trockman</title>
     <meta name="description" content="Asher Trockman">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -15,102 +15,134 @@
         gtag('config', 'UA-140780793-1');
     </script>
     <style>
+        @font-face {
+            font-family: 'PPNeueBit';
+            src: url('assets/ppneuebit-bold.otf') format('opentype');
+        }
         * {
-            font-family: 'Lato', sans-serif;
-            color: #333333;
+            font-family: 'PPNeueBit';
+            color: #eee;
         }
         body, html {
             margin: 0;
             padding: 0;
             font-weight: 100;
+            background: black;
         }
         #content {
-            width: 700px;
+            width: 80%;
+            max-width: 1200px;
+            min-width: 300px;
             margin: 0 auto;
-            padding-top: 50px;
-            line-height: 24px;
+            container-type: inline-size;
+            padding-top: 7.14cqi;
+            line-height: 3.43cqi;
         }
         h1 {
-            font-size: 42px;
+            font-size: 10.29cqi;
             margin: 0;
-            padding-bottom: 16px;
-            line-height: 42px;
+            padding-bottom: 3.57cqi;
+            line-height: 6cqi;
             letter-spacing: -1px;
+            color: #eee;
         }
         h2 {
-            font-size: 24px;
+            font-size: 3.43cqi;
             margin: 0;
-            line-height: 30px;
+            line-height: 4.29cqi;
             font-weight: bold;
             margin-top: 0;
-            margin-bottom: 15px; 
+            margin-bottom: 2.14cqi;
+            color: #eee;
         }
         #pics {
             float: left;
-            width: 200px;
+            width: 28.57%;
+			position: relative;
         }
         #about {
             float: right;
-            width: 470px;
-            margin-top: -5px;
+            width: 67.14%;
+            margin-top: -0.71cqi;
         }
         #about-container {
-            margin-top: 20px;
+            margin-top: 2.86cqi;
         }
         #about p {
             text-align: justify;
             margin-top: 0;
-            margin-bottom: 16px;
+            margin-bottom: 2.29cqi;
+            font-size: 3.14cqi;
             font-weight: 100;
-            color: #333333;
+            color: #eee;
+            line-height: 1.15;
         }
         #pics img {
-            width: 200px;
+            width: 100%;
+			display: block;
         }
-        a { 
-            color: #00369f;
-            font-weight: 100; 
+        a {
+            color: rgb(136, 112, 185);
+            font-weight: 100;
             text-decoration: none;
+            font-family: 'PPNeueBit';
+            font-size: 3.14cqi;
         }
-        a:hover { 
-            text-decoration: underline; 
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
         }
         #contact {
             clear: both;
-            padding-top: 16px;
+        }
+        #contact a {
+            margin-left: 1.5cqi;
         }
         .monospace {
-            padding: 5px 10px;
-            background: #f1f1f1;
-            font-family: 'Courier New', Courier, monospace;
-            color: #333333;
-            line-height: 42px;
+            padding: 0.71cqi 1.43cqi;
+            font-family: 'PPNeueBit';
+            font-size: 3.14cqi;
+            color: #eee;
+            line-height: 6cqi;
         }
-        .items { 
-            line-height: 19px;
+        .items {
+            line-height: 2.71cqi;
             border-top: 1px solid #e8e8e8;
-            margin-top: 30px;
-            padding-top: 20px; 
+            margin-top: 4.29cqi;
+            padding-top: 2.86cqi;
         }
-        .items table { 
+        .items table {
             border-collapse: collapse;
-            width: 100%; 
+            width: 100%;
         }
-        .items table tr { 
+        .items table tr {
             text-align: left;
         }
-        .items table .date { 
+        .items table .date5{
             width: 25%;
             text-align: right;
         }
-        .items table .exp { 
+        .items table .exp {
             width: 75%;
         }
         .items table td {
-            padding: 6px 0;
+            padding: 0.86cqi 0;
             vertical-align: top;
             border: none;
         }
+		.ads {
+			background: linear-gradient(0deg, #15B38C, #4D6BFE);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 50% auto;
+			-webkit-background-clip: text;
+		}
+		#noise {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			opacity: 0.5;
+		}
     </style>
   </head>
 
@@ -121,144 +153,55 @@
             </header>
             <article id="about-container">
                 <div id="pics">
-                    <img src="assets/img/asher.png" alt="Asher Trockman">
+					<canvas id="noise"></canvas>
+                    <img src="assets/img/asher-lowres.png" alt="Asher Trockman">
                 </div>
                 <div id="about">
                     <p>
-					    I'm a research scientist at <a href="https://research.google">Google</a> in New York, where I work on deep learning, mostly on language models.
-                        Recently, I did a PhD at <a href="https://cs.cmu.edu">Carnegie Mellon University</a>
+					I'm a research scientist at <a href="https://research.google">Google</a> in New York. I work on deep learning, focusing on long-context modeling and <a class="ads" href="https://antidistillation.com">antidistillation</a>.
+					</p>
+					<p>
+                        Previously, I completed my PhD at <a href="https://cs.cmu.edu">Carnegie Mellon University</a>
                         advised by <a href="http://zicokolter.com">Zico Kolter</a>,
-						where I worked on various topics in deep learning, including robustness, architecture design, initialization, and security.
+						where I worked on robustness, architecture design, initialization, and security.
                     </p>
-                    
                     <p>
-                        Previously, I have investigated natural experiments on open-source software 
+                        In the distant past, I did natural experiments on open-source software 
                         in the <a href="https://cmustrudel.github.io">Socio-Technical Research Using Data Excavation Lab</a> at CMU,
-                        and have worked on detecting surface features in orbital imagery of Mars at the <a href="https://ml.jpl.nasa.gov">Jet Propulsion Laboratory</a>.
+                        and I worked on detecting surface features in orbital imagery of Mars at the <a href="https://ml.jpl.nasa.gov">Jet Propulsion Laboratory</a>.
                     </p>
+					<div id="contact">
+						<span class="monospace" title="Surely bots are good enough to figure this out by now, right?">trockman<span style="font-size: 2.1cqi;">🌀</span>google.com</span>
+							<a style="padding-left: 9cqi;" href="https://scholar.google.com/citations?user=xd3LCGcAAAAJ&hl=en">Google Scholar</a>
+							<a href="https://github.com/ashertrockman">GitHub</a>
+							<a onclick="alert('Upon request (email me)')">CV</a>
+					</div>
                  
                 </div>
-                <div id="contact">
-                        <span class="monospace">trockman -at- google.com</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://scholar.google.com/citations?user=xd3LCGcAAAAJ&hl=en">Google Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://github.com/ashertrockman">GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a onclick="alert('Upon request')">CV</a>
-
-                </div>
             </article>
-
-            <div class="items">
-                <h2>Experience</h2>             
-                <table>
-                <tr>
-                    <td class="exp">
-                        <strong>Google Research</strong><br>
-                        Research Scientist
-                    </td>
-                    <td class="date">2025 &ndash; </td>
-                </tr>
-
-                <tr>
-                    <td class="exp">
-                        <strong>Google Research</strong><br>
-                        Research Intern
-                    </td>
-                    <td class="date">Summer 2024</td>
-                </tr>
-			
-                <tr>
-                    <td class="exp">
-                        <strong>Microsoft Research</strong><br>
-                        Research Intern (Physics of AGI) ❤️
-                    </td>
-                    <td class="date">Summer 2023</td>
-                </tr>
-			
-                <tr>
-                    <td class="exp">
-                        <strong>Bosch Center for AI</strong><br>
-                        Machine Learning Research Intern
-                    </td>
-                    <td class="date">Summer 2022</td>
-                </tr>
-
-                <tr>
-                    <td class="exp">
-                        <strong>NASA Jet Propulsion Laboratory</strong><br>
-                        <a href="https://ml.jpl.nasa.gov">Machine Learning & Instrument Autonomy Group</a><br>
-                        Research Assistant (Caltech <a href="http://www.sfp.caltech.edu/programs/surf">SURF</a>)
-                    </td>
-                    <td class="date">Summer 2018</td>
-                </tr>
-                
-                <tr>
-                    <td class="exp">
-                        <strong>Carnegie Mellon University</strong><br>
-                        <a href="https://isri.cs.cmu.edu">Institute for Software Research</a><br>
-                        Research Assistant (<a href="https://www.cmu.edu/scs/isr/reuse/">REUSE</a>)
-                    </td>
-                    <td class="date">Summer 2017</td>
-                </tr>
-                </table>
-            </div>
-
-            <div class="items">
-                <h2>Activities</h2>             
-                <table>
-                <tr>
-                    <td class="exp">
-                        <strong>Teaching Assistant</strong> &mdash;
-                        <a href="https://dlsyscourse.org">Deep Learning Systems</a>
-                    </td>
-                    <td class="date">Fall 2021 &amp; 2022</td>
-
-
-                </tr>
-
-                <tr>
-                    <td class="exp">
-                        <strong>Student Coordinator</strong> &mdash;
-                        <a href="https://www.cs.cmu.edu/~aiseminar/">CMU AI Seminar</a>
-                    </td>
-                    <td class="date">2022</td>
-
-
-                </tr>
-
-                <tr>
-                    <td class="exp">
-                        <strong>Coordinator</strong> &mdash;
-                        <a href="http://sigbovik.org">SIGBOVIK</a>
-                    </td>
-                    <td class="date">2022 &amp; 2021</td>
-
-
-                </tr>
-                </table>
-            </div>
-
-
-            <div class="items" style="margin-bottom: 32px;">
-                    <h2>Education</h2>
-                    <table>
-                        <tr>
-                        <td class="exp">    
-                            <strong>Carnegie Mellon University</strong><br>
-                            Ph.D. Computer Science
-                        </td>
-                        <td class="date">2019 &ndash; 2025</td>
-                        </tr>
-                        <tr>
-                            <td class="exp">                 
-                            <strong>University of Evansville</strong><br>
-                            B.S. Computer Science &amp; B.S. Mathematics
-                            </td>
-                            <td class="date">2016 &ndash; 2019</td>
-                            </td>
-                        </tr>
-                    </table>
-            </div>
-
       </div>
+	  <script>
+			const canvas = document.getElementById('noise');
+			const ctx = canvas.getContext('2d');
+			function resize() {
+			  canvas.width = window.innerWidth;
+			  canvas.height = window.innerHeight;
+			}
+			function fillNoise() {
+			  const imageData = ctx.createImageData(canvas.width, canvas.height);
+			  const data = imageData.data;
+			  for (let i = 0; i < data.length; i += 4) {
+				const a = Math.random();
+				data[i] = Math.random() * 255 | 0;
+				data[i + 1] = Math.random() * 255 | 0;
+				data[i + 2] = Math.random() * 255 | 0;
+				data[i + 3] = a * a * a * a * a * a * 255 | 0;
+			  }
+			  ctx.putImageData(imageData, 0, 0);
+			}
+			resize();
+			window.addEventListener('resize', resize);
+			setInterval(fillNoise, 50);
+	  </script>
   </body>
 </html>
